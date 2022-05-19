@@ -4,11 +4,13 @@ users:
  ~ Search hotels by town
  ~ Book hotels or talk directly to management staff
  ~ Recommend hotels
+ ~ Leave comments on hotel pages
 
 Admin:
  ~ Register hotels:
     ~ Price
     ~ Picture
+    ~ Little detail / about (optional)
     ~ Office number
     ~ Link to hotel website (optional)
     ~ Hotel email (optional)
