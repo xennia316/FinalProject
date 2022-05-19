@@ -1,0 +1,15 @@
+users:
+ ~ Search hotels by name
+ ~ Search hotels by evaluation (number of stars)
+ ~ Search hotels by town
+ ~ Book hotels or talk directly to management staff
+ ~ Recommend hotels
+
+Admin:
+ ~ Register hotels:
+    ~ Price
+    ~ Picture
+    ~ Office number
+    ~ Link to hotel website (optional)
+    ~ Hotel email (optional)
+ ~ Go to user mode
