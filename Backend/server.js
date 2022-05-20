@@ -6,7 +6,7 @@ const app = express();
 
 // Database connection
 const DB =
-  "mongodb+srv://Sonia:<password>@cluster0.hcmtn.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://Sonia:ZENNIA0709@cluster0.hcmtn.mongodb.net/?retryWrites=true&w=majority";
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
