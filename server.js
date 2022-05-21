@@ -23,6 +23,6 @@ app.use(cors());
 // Declaring port number
 const PORT = 8080;
 
-app.listen(PORT, (req, res) => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
