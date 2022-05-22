@@ -43,11 +43,11 @@ app.post("/add-room", async (req, res) => {
   res.json({ message: "Room added", data: newRoom });
 });
 
-app.get("/find-room", (req, res) => {
-  roomId = req.body;
+// app.get("/find-room", (req, res) => {
+//   roomId = req.body;
 
-  res.json({ message: "Available rooms", data: roomFound });
-});
+//   res.json({ message: "Available rooms", data: roomFound });
+// });
 // Declaring port number
 const PORT = process.env.PORT || 5000;
 
