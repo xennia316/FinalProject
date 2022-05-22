@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 const HotelModel = require("./Models/Hotel.model");
+const RoomModel = require("./Models/Room.model");
 require("dotenv").config();
 
 // Database connection
@@ -35,6 +36,12 @@ app.post("/add-hotel", async (req, res) => {
   res.json({ message: "Your hotel has been created", data: newHotel });
 });
 
+app.post("/add-room", async (req, res) => {
+  const { size, price, number, type } = await req.body;
+  const newRoom = await new RoomModel({ size, price, number, type });
+  newRoom.save();
+  res.json({ message: "Room added", data: newRoom });
+});
 // Declaring port number
 const PORT = process.env.PORT || 5000;
 
