@@ -42,6 +42,12 @@ app.post("/add-room", async (req, res) => {
   newRoom.save();
   res.json({ message: "Room added", data: newRoom });
 });
+
+app.get("/find-room", (req, res) => {
+  roomId = req.body;
+
+  res.json({ message: "Available rooms", data: roomFound });
+});
 // Declaring port number
 const PORT = process.env.PORT || 5000;
 
