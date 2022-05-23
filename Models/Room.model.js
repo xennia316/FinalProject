@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const RoomSchema = new mongoose.Schema({
-  size: {
+  category: {
     type: Number,
   },
   price: {
@@ -12,9 +12,10 @@ const RoomSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  type: {
-    type: String,
+  Picture: {
+    type: PictureInPictureWindow,
   },
+  timeStamps: true,
 });
 
 const Room = mongoose.model("Room", RoomSchema);
