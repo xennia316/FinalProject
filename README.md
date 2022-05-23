@@ -6,6 +6,7 @@
 Design Links:
 
 https://www.figma.com/file/BPqMra97Pamw4eJDJtoIVM/Untitled
+https://dribbble.com/shots/9411552-365daysbooking-Hotel-management-platform
 https://www.figma.com/proto/BPqMra97Pamw4eJDJtoIVM/Untitled?node-id=1%3A24
 
 Color pallet:
