@@ -5,10 +5,6 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  type: {
-    type: String,
-    required: true,
-  },
   email: {
     type: email,
     required: true,
@@ -20,6 +16,9 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: password,
     required: true,
+  },
+  permission: {
+    type: Boolean,
   },
 });
 
