@@ -6,6 +6,7 @@ const app = express();
 
 const HotelModel = require("./Models/Hotel.model");
 const RoomModel = require("./Models/Room.model");
+const Hotels = require("./Models/Hotel.model");
 require("dotenv").config();
 
 // Database connection
@@ -16,6 +17,9 @@ mongoose
   })
   .then(() => {
     console.log("Database connected..");
+  })
+  .catch(() => {
+    console.log("Unable to connect to database ...");
   });
 
 // Initializing node frameworks
@@ -36,18 +40,18 @@ app.post("/add-hotel", async (req, res) => {
   res.json({ message: "Your hotel has been created", data: newHotel });
 });
 
-app.post("/add-room", async (req, res) => {
-  const { size, price, number, type } = await req.body;
-  const newRoom = await new RoomModel({ size, price, number, type });
-  newRoom.save();
-  res.json({ message: "Room added", data: newRoom });
+// Searching a hotel by Name
+app.get("/find-hotel", async (req, res) => {
+  const hotelName = await req.body;
+
+  const Hotel = await Hotels.findOne({ hotelName: hotelName });
+  if (Hotel) {
+    res.json({ message: `Your hotel: ${hotelName}`, data: Hotel });
+  } else {
+    res.send(`Your hotel ${hotelName} could not be found`);
+  }
 });
 
-// app.get("/find-room", (req, res) => {
-//   roomId = req.body;
-
-//   res.json({ message: "Available rooms", data: roomFound });
-// });
 // Declaring port number
 const PORT = process.env.PORT || 5000;
 
