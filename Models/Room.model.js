@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const RoomSchema = new mongoose.Schema({
   category: {
-    type: Number,
+    type: String,
   },
   price: {
     type: Number,
@@ -12,11 +12,12 @@ const RoomSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  Picture: {
+  imageURL: {
     type: String,
   },
+  hotelId: { type: mongoose.ObjectId, ref: "hotels" },
 });
 
-const Room = mongoose.model("Room", RoomSchema);
+const Room = mongoose.model("room", RoomSchema);
 
 module.exports = Room;
