@@ -13,9 +13,8 @@ const RoomSchema = new mongoose.Schema({
     required: true,
   },
   Picture: {
-    type: PictureInPictureWindow,
+    type: String,
   },
-  timeStamps: true,
 });
 
 const Room = mongoose.model("Room", RoomSchema);
