@@ -52,6 +52,10 @@ router.post("/update-hotel", async (req, res) => {
   res.json({ message: "Here's your updated hotel data", data: updatedHotel });
 });
 
+router.get("/get-hotels", async (req, res) => {
+  const hotels = await HotelModel.find({}).populate({ path: "ownerID" });
+});
+
 router.delete("/delete-hotel", async (req, res) => {
   const { name } = await req.body;
   const Hotel = await Hotels.findOneAndDelete({ name })
