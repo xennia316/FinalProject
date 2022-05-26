@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router;
+const router = express.Router();
 
 const UserModel = require("../Models/User.model");
 
@@ -15,3 +15,5 @@ router.post("/sign-up", async (req, res) => {
   newUser.save();
   res.json({ message: `Welcome ${newUser.name}`, data: newUser });
 });
+
+module.exports = router;
