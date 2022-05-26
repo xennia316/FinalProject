@@ -6,6 +6,7 @@ const app = express();
 
 const HotelRouter = require("./Routes/Hotel.router");
 const RoomRouter = require("./Routes/Room.router");
+const UserRouter = require("./Routes/User.router");
 
 require("dotenv").config();
 
@@ -29,6 +30,7 @@ app.use(cors());
 
 app.use("/api/hotel", HotelRouter);
 app.use("/api/room", RoomRouter);
+app.use("/api/user", UserRouter);
 
 // Declaring port number
 const PORT = process.env.PORT || 5000;
