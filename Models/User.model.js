@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   email: {
-    type: email,
+    type: String,
     required: true,
   },
   town: {
@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema({
     required: false,
   },
   password: {
-    type: password,
+    type: String,
     required: true,
   },
   permission: {
