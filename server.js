@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 const app = express();
 
 const HotelRouter = require("./Routes/Hotel.router");
-const RoomRouter = require("./Routes/Room.router");
 const UserRouter = require("./Routes/User.router");
+const BookRouter = require("./Routes/Book.router");
 
 require("dotenv").config();
 
@@ -29,8 +29,8 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/hotel", HotelRouter);
-app.use("/api/room", RoomRouter);
 app.use("/api/user", UserRouter);
+app.use("/api/book", BookRouter);
 
 // Declaring port number
 const PORT = process.env.PORT || 5000;
