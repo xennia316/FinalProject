@@ -17,7 +17,5 @@ router.post("/add-room", async (req, res) => {
     data: newRoom,
   });
 });
-router.post("/book-room", async (req, res) => {
-  this.number = this.number - 1;
-});
+router.post("/book-room", async (req, res) => {});
 module.exports = router;
