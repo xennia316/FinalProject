@@ -39,6 +39,8 @@ router.post("/find-hoteltown", async (req, res) => {
   }
 });
 
+router.post("/add-wishlist", async (req, res) => {});
+
 router.post("/update-hotel", async (req, res) => {
   const { name, town, evaluation, recommendation, contact } = await req.body;
   const updatedHotel = await Hotels.findOneAndUpdate({
@@ -50,10 +52,6 @@ router.post("/update-hotel", async (req, res) => {
   });
   updatedHotel.save();
   res.json({ message: "Here's your updated hotel data", data: updatedHotel });
-});
-
-router.get("/get-hotels", async (req, res) => {
-  const hotels = await HotelModel.find({}).populate({ path: "ownerID" });
 });
 
 router.delete("/delete-hotel", async (req, res) => {
