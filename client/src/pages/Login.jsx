@@ -7,11 +7,13 @@ const Login = () => {
       <section className={`container ${styles.main}`}>
         <section className={`${styles.left}`}>
           <section className={`left-bottom`}>
+            <image src="../images/logo.jpg" />
             <h3>Sign In</h3>
             <form>
               <label for="name">
                 <h6>Name:</h6>{" "}
               </label>
+              <i class="fa fa-user"></i>
               <input
                 type={"text"}
                 placeholder="Enter your name"
@@ -36,7 +38,7 @@ const Login = () => {
                 </span>
               </div>
 
-              <button type="button" class={`btn-outline-secondary btn p-2 m-5`}>
+              <button type="button" class={`btn-secondary btn p-2 m-5`}>
                 <h5>Sign In</h5>
               </button>
             </form>
