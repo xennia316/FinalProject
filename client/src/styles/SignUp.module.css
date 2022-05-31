@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(0, 29, 61);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.left .h3 {
+    color: #ffc300;
+}
+
+.left {
+    width: 50%;
+    background: rgb(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.right .h1,
+.h2 {
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
+}
+
+.sign {
+    font-size: 18px;
+}
+
+.image {
+    height: 200px;
+    width: 200px;
+    background-color: #8b6b00;
+}
+
+.right {
+    width: 50%;
+    padding: 2rem;
+    background-image: url(../images/hotel-back.webp);
+    /* border: yellow solid; */
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.left .forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.left .forms label {
+    margin: 0.5rem 0 0 !important;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.left .input {
+    padding: 0.25rem !important;
+    border: 0;
+    color: #eee;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
+    border-radius: 10px;
+    border-bottom: 1px solid #eee;
+    background: transparent !important;
+    outline: none !important;
+}
+
+.lineBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 !important;
+
+}
+
+.line {
+    height: 1px;
+    width: 15%;
+    border-top: 1px solid #8b6b00;
+}
+
+.lineBox .p {
+    padding: 0 .5rem !important;
+    color: #ffc300;
+}
+
+.input:focus {
+    border-bottom: #ffc300 1px solid;
+}
+
+.input:hover {
+    color: #eee;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
+    border-radius: 15px;
+    background: transparent !important;
+    border-bottom: 1px solid #ffc300;
+}
+
+.a {
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 1rem !important;
+}
+
+.left .input::placeholder {
+    color: grey;
+    font-size: 16px;
+    margin-left: 1rem !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 5px !important;
+        font-size: 16px;
+        box-shadow: #ffc300 2px 5px;
+    }
+
+    .left,
+    .right {
+        padding-top: 5rem;
+        width: 60vw !important;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: rgb(54, 54, 92) 2px 5px 5px;
+
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left .h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10vh !important;
+    }
+
+    .sign {
+        font-size: 16px;
+        width: 95% !important;
+    }
+}
+
+@media only screen and (max-width: 589px) {
+    .left .input {
+        width: 80% !important;
+    }
+
+    .left {
+        padding-left: 10% !important;
+        width: 90vw !important;
+    }
+
+    .left .h3 {
+        display: block;
+    }
+
+    .button .h5 {
+        font-size: 12px !important;
+    }
+
+    .lineBox {
+        width: 100%;
+        display: flex;
+        left: 0 !important;
+    }
+
+    .line {
+        align-items: center;
+        justify-content: center;
+        height: 1px;
+        width: 15%;
+        border-top: 1px solid #8b6b00;
+    }
+
+    .lineBox .p {
+        padding: 0 0.5rem !important;
+        color: #ffc300;
+    }
+
+}
