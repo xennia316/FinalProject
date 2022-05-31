@@ -28,8 +28,8 @@
 .left {
     width: 50%;
     background: rgb(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
@@ -71,8 +71,27 @@ h2 {
 
 .left input {
     padding: 0.25rem !important;
-    border: none;
-    border-radius: 10px;
+    border: 0;
+    color: #eee;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
+    border-radius: 15px;
+    border-bottom: 1px solid #eee;
+    background: transparent !important;
+    outline: none !important;
+}
+
+input:focus {
+    border-bottom: #ffc300 1px solid;
+}
+
+input:hover {
+    color: #eee;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
+    border-radius: 15px;
+    background: transparent !important;
+    border-bottom: 1px solid #ffc300;
 }
 
 form a {
@@ -97,4 +116,65 @@ form a:hover {
     color: grey;
     font-size: 16px;
     margin-left: 1rem !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 5px !important;
+        font-size: 16px;
+        box-shadow: #ffc300 2px 5px;
+    }
+
+    .left,
+    .right {
+        padding-top: 5rem;
+        width: 60vw !important;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: rgb(54, 54, 92) 2px 5px 5px;
+
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10vh !important;
+    }
+
+    button {
+        background-color: #8b6b00 !important;
+        margin: 0 auto !important;
+        width: 8rem !important;
+    }
+}
+
+@media only screen and (max-width: 589px) {
+    .left input {
+        width: 80% !important;
+    }
+
+    .left {
+        padding-left: 10% !important;
+        width: 90vw !important;
+    }
+
+    .left h3 {
+        display: block;
+    }
+
+    button h5 {
+        font-size: 12px !important;
+    }
+
 }
