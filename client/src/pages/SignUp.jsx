@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/SignUp.module.css";
-import logo from "../images/logo.jpg";
+import logo from "../images/side-logo.png";
+
+// Icons import
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SignUp = () => {
   const inputs = [
@@ -40,7 +43,7 @@ const SignUp = () => {
   const ListInput = inputs.map((value, index) => {
     return (
       <>
-        <label>
+        <label className={styles.label}>
           <p>{value.label}</p>
         </label>
         <input
@@ -60,14 +63,16 @@ const SignUp = () => {
       <section className={`container-fluid ${styles.body}`}>
         <section className={`container ${styles.main}`}>
           <section className={`${styles.left}`}>
-            <section className={`left-bottom`}>
-              <image src={logo} className={`${styles.image}`} />
+            {" "}
+            <img src={logo} className={`${styles.image}`} />
+            <section className={styles.leftBottom}>
               <h3 className={styles.h3}>Sign Up</h3>
-              <form className={styles.forms}>{ListInput}</form>
             </section>
+            <form className={styles.forms}>{ListInput}</form>
             <div className={styles.lineBox}>
               <div className={styles.line}></div>
               <p className={styles.p}>OR</p>
+              <FontAwesomeIcon icon="check-square" />
               <div className={styles.line}></div>
             </div>
             <section>
