@@ -5,6 +5,7 @@
     padding: 0 !important;
     box-sizing: border-box !important;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 .body {
@@ -12,26 +13,33 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: rgb(0, 29, 61);
+    background: #003366;
 }
 
 .main {
     display: flex;
     flex-direction: row;
-    height: 80vh;
+    height: 90vh;
+    padding: 1rem;
 }
 
 .left .h3 {
     color: #ffc300;
 }
 
+.leftBottom {
+    display: flex;
+    gap: 9rem;
+}
+
 .left {
     width: 50%;
     background: rgb(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+    padding: 1rem;
 }
 
 .right .h1,
@@ -46,9 +54,10 @@
 }
 
 .image {
-    height: 200px;
+    height: 100px;
     width: 200px;
-    background-color: #8b6b00;
+    background-size: cover;
+    background-position: center;
 }
 
 .right {
@@ -74,7 +83,7 @@
     flex-direction: column;
 }
 
-.left .forms label {
+.left .forms .label {
     margin: 0.5rem 0 0 !important;
     color: #fff;
     font-size: 16px;
@@ -156,7 +165,7 @@
         width: 60vw !important;
         border: none !important;
         border-radius: 0px !important;
-        box-shadow: rgb(54, 54, 92) 2px 5px 5px;
+        box-shadow: #36365c 2px 5px 5px;
 
     }
 
@@ -169,7 +178,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 10vh !important;
     }
 
     .sign {
