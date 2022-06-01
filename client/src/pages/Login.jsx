@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/login.module.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+
 const Login = () => {
   return (
     <section className={`container-fluid ${styles.body}`}>
@@ -13,21 +16,21 @@ const Login = () => {
               <label for="name" className={styles.label}>
                 <h6 className={styles.h6}>Name:</h6>{" "}
               </label>
-              <i class="fa fa-user"></i>
               <input
                 className={styles.input}
                 type={"text"}
-                placeholder="Enter your name"
+                placeholder="&#xf4fc; Enter your name"
                 name="name"
                 required
               />
               <label for="password" className={`text-light ${styles.label}`}>
                 <h6 className={styles.h6}>Password:</h6>{" "}
               </label>
+              {/* <FontAwesomeIcon icon={faLock} className={styles.f} />{" "} */}
               <input
                 className={styles.input}
                 type={"password"}
-                placeholder="Enter your password"
+                placeholder=" &#xf728; Enter your password"
                 name="password"
                 required
               />
@@ -43,7 +46,6 @@ const Login = () => {
                   </a>
                 </span>
               </div>
-
               <button
                 type="button"
                 class={`btn-secondary btn p-2 m-5 ${styles.button}`}
