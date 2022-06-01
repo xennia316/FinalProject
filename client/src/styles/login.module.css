@@ -5,6 +5,7 @@
     padding: 0 !important;
     box-sizing: border-box !important;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 .body {
@@ -12,7 +13,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: rgb(0, 29, 61);
+    background: #003366;
 }
 
 .main {
@@ -32,6 +33,11 @@
     backdrop-filter: blur(15px) !important;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+}
+
+.f {
+    font-size: 16px;
+    color: #ffc300;
 }
 
 .right .h1,
@@ -136,7 +142,7 @@
         width: 60vw !important;
         border: none !important;
         border-radius: 0px !important;
-        box-shadow: rgb(54, 54, 92) 2px 5px 5px;
+        box-shadow: #36365c 2px 5px 5px;
 
     }
 
