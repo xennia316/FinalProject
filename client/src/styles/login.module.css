@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
 .body {
     display: flex;
     align-items: center;
@@ -30,13 +22,13 @@
     width: 50%;
     background: rgb(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
 
 .f {
-    font-size: 16px;
+    /* font-size: 16px; */
     color: #ffc300;
 }
 
@@ -44,7 +36,7 @@
 .h2 {
     color: whitesmoke;
     font-weight: bold;
-    text-shadow: 2px 2px #000;
+    text-shadow: 4px 2px #000;
 }
 
 .right {
@@ -62,7 +54,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .left .form {
@@ -76,8 +67,8 @@
 }
 
 .left .input {
-    padding: 0.25rem !important;
-    border: 0;
+    padding: .5rem;
+    border: none;
     color: #eee;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px) !important;
@@ -85,6 +76,8 @@
     border-bottom: 1px solid #eee;
     background: transparent !important;
     outline: none !important;
+    width: 80%;
+    font-size: 1.2rem;
 }
 
 .input:focus {
@@ -94,34 +87,39 @@
 .input:hover {
     color: #eee;
     -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px);
     border-radius: 15px;
-    background: transparent !important;
+    background: transparent;
     border-bottom: 1px solid #ffc300;
 }
 
+
 .form .a {
-    color: #fff !important;
-}
-
-.left .span {
-    transition-property: margin-top !important;
-    transition-delay: 0.5ms !important;
-}
-
-.left .span:hover {
-    margin-top: -1px !important;
-    color: #ffc300 !important;
+    color: #fff;
+    font-size: 1rem;
 }
 
 .form .a:hover {
-    color: #ffc300 !important;
+    color: #ffc300;
 }
 
 .left .input::placeholder {
     color: grey;
-    font-size: 16px;
-    margin-left: 1rem !important;
+    font-size: 1.2rem;
+}
+
+.left {
+    padding: 2rem;
+}
+
+.button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+.leftBottom {
+    width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -155,24 +153,34 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 10vh !important;
-    }
-
-    .button {
-        background-color: #8b6b00 !important;
-        margin: 0 auto !important;
-        width: 8rem !important;
     }
 }
 
 @media only screen and (max-width: 589px) {
-    .left .input {
-        width: 80% !important;
+
+    .leftBottom {
+        width: 100%;
     }
 
     .left {
-        padding-left: 10% !important;
         width: 90vw !important;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .left .form .input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .left .form .input::placeholder {
+        font-size: 1rem;
+    }
+
+    .left .a {
+        font-size: 0.6rem;
     }
 
     .left .h3 {
