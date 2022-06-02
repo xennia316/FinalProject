@@ -9,7 +9,7 @@ const Login = () => {
     <section className={`container-fluid ${styles.body}`}>
       <section className={`container ${styles.main}`}>
         <section className={`${styles.left}`}>
-          <section className={`left-bottom`}>
+          <section className={styles.leftBottom}>
             <image src="../images/logo.jpg" />
             <h3 className={styles.h3}>Sign In</h3>
             <form className={styles.form}>
@@ -19,7 +19,7 @@ const Login = () => {
               <input
                 className={styles.input}
                 type={"text"}
-                placeholder="&#xf4fc; Enter your name"
+                placeholder="Enter your name"
                 name="name"
                 required
               />
@@ -30,7 +30,7 @@ const Login = () => {
               <input
                 className={styles.input}
                 type={"password"}
-                placeholder=" &#xf728; Enter your password"
+                placeholder="Enter your password"
                 name="password"
                 required
               />
@@ -48,9 +48,9 @@ const Login = () => {
               </div>
               <button
                 type="button"
-                class={`btn-secondary btn p-2 m-5 ${styles.button}`}
+                className={`btn-secondary btn ${styles.button}`}
               >
-                <h5 className={styles.h5}>Sign In</h5>
+                Sign In
               </button>
             </form>
           </section>
