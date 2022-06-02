@@ -64,7 +64,7 @@ const SignUp = () => {
         <section className={`container ${styles.main}`}>
           <section className={`${styles.left}`}>
             {" "}
-            <img src={logo} className={`${styles.image}`} />
+            {/* <img src={logo} className={`${styles.image}`} /> */}
             <section className={styles.leftBottom}>
               <h3 className={styles.h3}>Sign Up</h3>
             </section>
