@@ -1,25 +1,30 @@
 import React from "react";
-import styles from "../Card/CardStyles.module.css";
+
+import styles from "./CardStyles.module.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
+import picture from "../../images/gradient4.jpg";
 
 const Card = (param) => {
   return (
-    <>
-      <section>
-        <section
-          className={`col-lg-4 col-md-6 col-sm-12 ${styles.imageSection}`}
-        >
-          <img />
-        </section>
-        <section>
-          <div className={`d-flex`}>
-            <p className={`col-lg-2`}>param.name</p>
-            <p className={`col-lg-2`}>param.location</p>
-          </div>
-          <p className={`col-lg-8`}>param.evaluation</p>
-          <button className={`btn btn-outline`}>View more</button>
-        </section>
+    <a className={styles.cardBody}>
+      <section className={styles.imageContainer}>
+        <img src={picture} alt="image" className={styles.image} />
       </section>
-    </>
+      <section className={styles.details}>
+        <p className={styles.p}>{param.name}</p>
+        <p className={styles.pmid}>
+          <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />{" "}
+          {param.location}
+        </p>
+        <p className={styles.p}>
+          ${param.price}
+          <span className={styles.prd}>/ night</span>
+        </p>
+      </section>
+    </a>
   );
 };
 
