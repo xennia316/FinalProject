@@ -2,47 +2,49 @@ import React from "react";
 
 import styles from "./sideNav.module.css";
 
+// import logo from "../../images/Flogo-side.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { faSearchLocation } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faStarAndCrescent } from "@fortawesome/free-solid-svg-icons";
-import { faListDots } from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { faDoorOpen } from "@fortawesome/free-solid-svg-icons";
 
 const SideNav = () => {
   return (
     <>
       <section className={styles.body}>
+        {/* <img src={logo} className={styles.image} /> */}
         <section className={styles.top}>
-          <p className={styles.first}>
+          <p className={styles.first} title="Home">
             {" "}
             <FontAwesomeIcon icon={faHome} />
           </p>
-
-          <span className={styles.span}>Home</span>
         </section>
         <section className={styles.middle}>
-          <p className={styles.second}>
-            <FontAwesomeIcon icon={faSearch} />
-            <span className={styles.span}> Search by name</span>
-          </p>
-          <p className={styles.third}>
+          <p className={styles.fourth} title="Wish list">
             {" "}
-            <FontAwesomeIcon icon={faSearchLocation} />
-            <span className={styles.span}>Search by town</span>
+            <FontAwesomeIcon icon={faStarHalfAlt} />
           </p>
-          <p className={styles.fourth}>
+          <p className={styles.second} title="Cantact us">
+            <FontAwesomeIcon icon={faAddressCard} />
+          </p>
+          <p className={styles.third} title="Settings">
             {" "}
-            <FontAwesomeIcon icon={faStarAndCrescent} />
-            <span className={styles.span}>WishList</span>
+            <FontAwesomeIcon icon={faGear} />
           </p>
         </section>
         <section className={styles.bottom}>
-          <p className={styles.five} title="Options">
+          <p className={styles.fifth} title="Log Out">
             {" "}
-            <FontAwesomeIcon icon={faListDots} />
+            <FontAwesomeIcon icon={faDoorOpen} />
           </p>
-          <span className={styles.span}>Options</span>
+          <p className={styles.fifth} title="Options">
+            {" "}
+            <FontAwesomeIcon icon={faEllipsis} />
+          </p>
         </section>
       </section>
     </>
