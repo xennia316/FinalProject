@@ -1,0 +1,51 @@
+.cardBody {
+    /* margin: 0 auto; */
+    width: auto;
+    display: block;
+    margin: 1rem;
+}
+
+.imageContainer {
+    height: 75px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.image {
+    width: inherit;
+    border-radius: 10px;
+}
+
+.cardBody {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.details {
+    padding: 0.2rem 0.7rem 0;
+}
+
+.details:hover {
+    color: grey;
+}
+
+.p {
+    font-size: .9rem;
+    margin: 0;
+}
+
+.pmid,
+.prd {
+    font-size: .6rem;
+    font-weight: 100;
+    margin: 0;
+    color: rgb(119, 119, 119);
+}
+
+.icon {
+    color: #003366;
+}
