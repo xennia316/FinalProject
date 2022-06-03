@@ -1,4 +1,5 @@
 import React from "react";
+// import { useState } from "react";
 
 import styles from "./sideNav.module.css";
 
@@ -13,6 +14,13 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { faDoorOpen } from "@fortawesome/free-solid-svg-icons";
 
 const SideNav = () => {
+  // const [toggle, settoggle] = useState(false);
+
+  // handleClick = () => {
+  //   toggle(true);
+  //   settoggle(false);
+  // };
+
   return (
     <>
       <section className={styles.body}>
@@ -37,7 +45,7 @@ const SideNav = () => {
           </p>
         </section>
         <section className={styles.bottom}>
-          <p className={styles.fifth} title="Log Out">
+          <p className={`${styles.fifth} ${styles.near}`} title="Log Out">
             {" "}
             <FontAwesomeIcon icon={faDoorOpen} />
           </p>
