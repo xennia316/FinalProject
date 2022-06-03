@@ -4,11 +4,9 @@ const UserSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
     },
     email: {
       type: String,
-      required: true,
     },
     town: {
       type: String,
@@ -16,7 +14,6 @@ const UserSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true,
     },
     permission: {
       type: Boolean,
@@ -26,7 +23,6 @@ const UserSchema = new mongoose.Schema(
     },
     imageUrl: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }
