@@ -1,0 +1,66 @@
+.body {
+    padding: 8rem .1rem 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.image {
+    height: 300px;
+    width: 250px;
+    border-radius: 1rem;
+}
+
+.imageh3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.sideImg {
+    height: 150px;
+    width: 150px;
+    border-radius: 1rem;
+    margin: .5rem 0.5rem .1rem;
+}
+
+
+
+.top {
+    display: flex;
+}
+
+.sideImgDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.bottomHeadDiv {
+    display: flex;
+    gap: 1.8rem;
+    padding: .5rem;
+    font-weight: 500;
+}
+
+.text {
+    padding: .5rem;
+    height: 12vh;
+    overflow-y: hidden;
+    width: 23rem;
+}
+
+.imageh3 {
+    color: #003366;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 23rem;
+}
+
+.button {
+    width: 10rem;
+    background-color: #003366;
+}
