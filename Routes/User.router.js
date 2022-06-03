@@ -20,10 +20,10 @@ router.post("/sign-up", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const { name, password } = await req.body;
-  const found = await User.findOne({ name, password });
+  const { email, password } = await req.body;
+  const found = await User.findOne({ email, password });
   if (found) {
-    res.json({ message: `Welcome ${found.name}`, data: found });
+    res.json({ message: `Welcome ${found.email}`, data: found });
   } else {
     res.json({ message: "not found" });
   }
