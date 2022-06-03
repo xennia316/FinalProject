@@ -3,11 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 95vh;
+    height: 99vh;
     width: 5vw;
     border-radius: 25px;
     background: #003366;
-    margin-left: 1rem;
+    margin-left: .1rem;
 }
 
 .image {
@@ -46,6 +46,7 @@
     font-size: 30px;
 }
 
+
 .first:hover,
 .second :hover,
 .third:hover,
@@ -53,4 +54,28 @@
 .fifth:hover {
     color: #ffc300;
     cursor: context-menu;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .first,
+    .second,
+    .third,
+    .fourth,
+    .near {
+        display: none;
+    }
+
+    .body {
+        height: 3rem;
+        margin: .3rem;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .body {
+        width: 2rem;
+        height: 2rem;
+    }
 }
