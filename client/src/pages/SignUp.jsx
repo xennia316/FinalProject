@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import styles from "../styles/SignUp.module.css";
 import logo from "../images/side-logo.png";
 
@@ -6,11 +8,28 @@ import logo from "../images/side-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    town: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+
   const inputs = [
     {
       label: "Name:",
       type: "text",
-      value: "name",
+      value: user.name,
       name: "name",
       required: true,
       placeholder: "Please enter your name",
@@ -18,7 +37,7 @@ const SignUp = () => {
     {
       label: "Email:",
       type: "email",
-      value: "email",
+      value: user.email,
       name: "email",
       required: true,
       placeholder: "Please enter your email",
@@ -26,7 +45,7 @@ const SignUp = () => {
     {
       label: "Town:",
       type: "text",
-      value: "town",
+      value: user.town,
       name: "town",
       required: false,
       placeholder: "Where do you reside",
@@ -34,12 +53,42 @@ const SignUp = () => {
     {
       label: "Password:",
       type: "password",
-      value: "password",
+      value: user.password,
       name: "password",
       required: true,
       placeholder: "Your password ...",
     },
   ];
+
+  const checkProperties = (user) => {
+    if (
+      user.name === "" ||
+      user.email === "" ||
+      user.password === "" ||
+      user.town === ""
+    ) {
+      alert("Please fill all input fields!");
+      setUser({ name: "", email: "", password: "", town: "" });
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (checkProperties(user)) {
+      let result = await axios
+        .post("/api/user/sign-up", user)
+        .then((data) => data);
+      if (result.status === 200) {
+        localStorage.setItem("loggedUser", JSON.stringify(result.data.data));
+        navigate("/home");
+      } else {
+        alert("doesn't work!");
+      }
+    }
+  };
+
   const ListInput = inputs.map((value, index) => {
     return (
       <>
@@ -54,6 +103,7 @@ const SignUp = () => {
           value={value.value}
           required={value.required}
           key={index}
+          onChange={handleChange}
         />
       </>
     );
@@ -83,6 +133,7 @@ const SignUp = () => {
                   SignUp with google
                 </button>
                 <button
+                  onClick={handleSubmit}
                   className={`btn btn-warning btn-lg mt-2 col-lg-12 p-2 col-md-8 col-sm-5 text-light ${styles.sign}`}
                 >
                   SignUp

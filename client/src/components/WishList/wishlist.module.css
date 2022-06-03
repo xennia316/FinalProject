@@ -1,0 +1,52 @@
+.wishList {
+    display: flex;
+    width: 40rem;
+    justify-content: space-between;
+    background-image: url(../../images/gradient4.jpg);
+    height: 7rem;
+    padding: 1rem .5rem;
+    border-radius: 10px;
+}
+
+.side {
+    color: #fff;
+    padding-top: .2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: fit-content;
+}
+
+.right {
+    /* position: fixed; */
+    border: 3px solid #003366;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 15px;
+    box-shadow: #ffc300 -10px 20px 10px;
+}
+
+.sideNav {
+    position: fixed;
+}
+
+.sideContainer {
+    position: relative;
+}
+
+.main {
+    position: relative;
+    display: flex;
+}
