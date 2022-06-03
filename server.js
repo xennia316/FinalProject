@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
+const path = require("path");
 
 const HotelRouter = require("./Routes/Hotel.router");
 const UserRouter = require("./Routes/User.router");
@@ -23,6 +24,8 @@ mongoose
     console.log("Unable to connect to database ...");
   });
 
+app.use(express.static(path.join(__dirname, "client", "build")));
+
 // Initializing node frameworks
 app.use(express.urlencoded());
 app.use(express.json());
@@ -34,6 +37,10 @@ app.use("/api/book", BookRouter);
 
 // Declaring port number
 const PORT = process.env.PORT || 5000;
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
