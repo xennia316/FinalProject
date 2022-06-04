@@ -25,6 +25,8 @@
 
 .left .h3 {
     color: #ffc300;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .leftBottom {
