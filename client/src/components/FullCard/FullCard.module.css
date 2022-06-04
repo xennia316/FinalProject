@@ -64,3 +64,77 @@
     width: 10rem;
     background-color: #003366;
 }
+
+@media only screen and (max-width: 600px) {
+    .main {
+        padding-top: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .body {
+        position: fixed;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        padding-top: 0;
+        position: relative;
+        overflow: hidden;
+        width: 350px;
+    }
+
+    .body {
+        top: 0;
+        overflow: hidden;
+        width: 347px;
+        position: fixed;
+        left: 0;
+    }
+
+    .image {
+        height: 200px;
+        width: 150px;
+        border-radius: 1rem;
+    }
+
+    .imageh3 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .sideImg {
+        height: 100px;
+        width: 100px;
+        border-radius: 1rem;
+        margin: .3rem 0.3rem .1rem;
+    }
+
+    .bottomHeadDiv {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        padding: .5rem;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .text {
+        padding: .5rem;
+        height: 16vh;
+        font-size: 18px;
+        overflow: hidden;
+        width: 15rem;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        margin-left: 1rem;
+        /* align-items: center; */
+        justify-content: space-around;
+        width: 23rem;
+    }
+}
