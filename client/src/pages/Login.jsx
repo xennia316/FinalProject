@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../styles/login.module.css";
 
@@ -46,18 +46,18 @@ const Login = () => {
   return (
     <section className={`container-fluid ${styles.body}`}>
       <section className={`container ${styles.main}`}>
-        <section className={`${styles.left}`}>
+        <section className={`${styles.left}`} id={styles.id}>
           <section className={styles.leftBottom}>
             <image src="../images/logo.jpg" />
             <h3 className={styles.h3}>Sign In</h3>
             <form className={styles.form}>
-              <label for="name" className={styles.label}>
+              <label for="email" className={styles.label}>
                 <h6 className={styles.h6}>Name:</h6>{" "}
               </label>
               <input
                 className={styles.input}
                 type="email"
-                placeholder="Enter your name"
+                placeholder="Enter your email"
                 name="email"
                 value={user.email}
                 onChange={handleChange}
@@ -77,14 +77,14 @@ const Login = () => {
               />
               <div className={`d-flex flex-row mt-3`}>
                 <span className={`m-2 pr-1 text-muted ${styles.span}`}>
-                  <a href="#" className={styles.a}>
+                  <Link to="/signup" className={styles.a}>
                     Forgot password?
-                  </a>
+                  </Link>
                 </span>{" "}
                 <span className={`m-2 pr-1`}>
-                  <a href="#" className={styles.a}>
+                  <Link to="/signup" className={styles.a}>
                     SignUp instead?
-                  </a>
+                  </Link>
                 </span>
               </div>
               <button
