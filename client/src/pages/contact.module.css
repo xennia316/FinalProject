@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #003366;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.left .h3 {
+    color: #ffc300;
+}
+
+.textarea {
+    height: auto;
+}
+
+.login #id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #003366 !important;
+    width: 50%;
+    background: rgba(224, 7, 7, 0.1);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.f {
+    /* font-size: 16px; */
+    color: #ffc300;
+}
+
+.right .h1,
+.h2 {
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow: 4px 2px #000;
+}
+
+.right {
+    width: 50%;
+    padding: 2rem;
+    background-image: url(../images/hotel-back.webp);
+    /* border: yellow solid; */
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.left .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.left .form .label {
+    margin: 2rem !important;
+    color: #fff;
+}
+
+.left .input {
+    padding: .5rem;
+    border: none;
+    color: #eee;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
+    border-radius: 15px;
+    border-bottom: 1px solid #eee;
+    background: transparent !important;
+    outline: none !important;
+    width: 80%;
+    font-size: 1.2rem;
+}
+
+.input:focus {
+    border-bottom: #ffc300 1px solid;
+}
+
+.input:hover {
+    color: #eee;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    background: transparent;
+    border-bottom: 1px solid #ffc300;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form .a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form .a:hover {
+    color: #ffc300;
+}
+
+.left .input::placeholder {
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.left {
+    padding: 2rem;
+}
+
+.button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+.leftBottom {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 5px !important;
+        font-size: 16px;
+        box-shadow: #ffc300 2px 5px;
+    }
+
+    .left,
+    .right {
+        padding-top: 5rem;
+        width: 60vw !important;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: #36365c 2px 5px 5px;
+
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left .h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 589px) {
+
+    .leftBottom {
+        width: 100%;
+    }
+
+    .left {
+        width: 90vw !important;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .left .form .input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .left .form .input::placeholder {
+        font-size: 1rem;
+    }
+
+    .left .a {
+        font-size: 0.6rem;
+    }
+
+    .left .h3 {
+        display: block;
+    }
+
+    .button .h5 {
+        font-size: 12px !important;
+    }
+
+}
