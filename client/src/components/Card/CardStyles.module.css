@@ -9,6 +9,10 @@
     cursor: pointer;
 }
 
+.side {
+    display: none;
+}
+
 .imageContainer {
     height: 150px;
     width: 200px;
@@ -53,5 +57,19 @@
 @media only screen and (max-width: 405px) {
     .p {
         font-size: 1rem;
+    }
+
+    .side {
+        display: flex;
+        width: inherit;
+        height: inherit;
+        justify-content: space-around;
+        padding: .5rem;
+        font-size: 16px;
+    }
+
+    .side .button {
+        width: 3.5rem;
+        height: 2rem;
     }
 }
