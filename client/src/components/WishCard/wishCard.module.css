@@ -19,14 +19,17 @@
 .cardBody {
     display: flex;
     text-decoration: none;
+    background-color: #336b9c;
+    backdrop-filter: blur(15px);
+    padding: .5rem;
     font-size: 1.3rem;
-    color: rgb(223, 215, 215);
+    color: rgb(241, 234, 234);
     font-weight: 500;
     border-radius: 10px;
 }
 
 .cardBody:hover {
-    color: rgb(221, 221, 221);
+    color: rgb(230, 223, 223);
     cursor: pointer;
 }
 
@@ -45,7 +48,7 @@
     font-size: .6rem;
     font-weight: 100;
     margin: 0;
-    color: rgb(202, 202, 202);
+    color: rgb(192, 192, 192);
 }
 
 .icon {
