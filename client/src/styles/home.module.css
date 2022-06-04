@@ -10,6 +10,15 @@
     padding-left: 2.5rem;
 }
 
+.newCard {
+    height: fit-content;
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .cardList {
     display: flex;
     gap: 1rem;
