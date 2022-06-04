@@ -5,6 +5,7 @@ import Signup from "./pages/SignUp";
 import Card from "./components/Card/Card";
 import SideNav from "./components/sidenav/SideNav";
 import Home from "./pages/Home";
+import Contact from "./pages/contactus";
 import Wish from "./components/WishCard/WishCard";
 import FullCard from "./components/FullCard/FullCard";
 import HotelProvider from "./HotelContext";
@@ -16,6 +17,8 @@ const App = () => {
     <HotelProvider>
       <Router>
         <Routes>
+          <Route path="/contactus" element={<Contact />}></Route>
+          <Route path="/fullcard" element={<FullCard />}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
