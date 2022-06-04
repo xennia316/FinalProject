@@ -41,7 +41,8 @@
 .second,
 .third,
 .fourth,
-.fifth {
+.fifth,
+.link {
     color: #fff;
     font-size: 30px;
 }
@@ -51,7 +52,8 @@
 .second :hover,
 .third:hover,
 .fourth:hover,
-.fifth:hover {
+.fifth:hover,
+.link:hover {
     color: #ffc300;
     cursor: context-menu;
 }
