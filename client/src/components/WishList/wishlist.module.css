@@ -3,8 +3,8 @@
     width: 40rem;
     justify-content: space-between;
     background-image: url(../../images/gradient4.jpg);
-    height: 7rem;
-    padding: 1rem .5rem;
+    height: fit-content;
+    padding: 1.5rem .5rem;
     border-radius: 10px;
 }
 
@@ -30,12 +30,16 @@
     border: 3px solid #003366;
     padding: 0;
     margin-left: 0;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     margin-right: 3rem;
     height: fit-content;
     width: fit-content;
     border-radius: 15px;
     box-shadow: #ffc300 -10px 20px 10px;
+}
+
+.rightContainer {
+    position: relative;
 }
 
 .sideNav {
