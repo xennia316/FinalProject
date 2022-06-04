@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, Router } from "react-router-dom";
 import axios from "axios";
 import styles from "../styles/SignUp.module.css";
 import logo from "../images/side-logo.png";
@@ -130,17 +130,19 @@ const SignUp = () => {
                 <button
                   className={`btn btn-outline-muted btn-lg col-lg-12 p-2 col-md-8 col-sm-5 text-light  ${styles.sign}`}
                 >
-                  SignUp with google
+                  Sign Up with google
                 </button>
+
                 <button
                   onClick={handleSubmit}
                   className={`btn btn-warning btn-lg mt-2 col-lg-12 p-2 col-md-8 col-sm-5 text-light ${styles.sign}`}
                 >
-                  SignUp
+                  Sign Up
                 </button>
-                <a href="#" className={styles.a}>
+
+                <Link to="/login" className={styles.a}>
                   Already have an account?
-                </a>
+                </Link>
               </div>
             </section>
           </section>
