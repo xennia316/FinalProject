@@ -3,10 +3,12 @@ import React, { useContext } from "react";
 import styles from "./CardStyles.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 import picture from "../../images/hotel1.jpg";
+import picture2 from "../../images/hotel2.jpeg";
 import { HotelContext } from "../../HotelContext";
+import { Link } from "react-router-dom";
 
 const Card = (param) => {
   const { setData } = useContext(HotelContext);
@@ -25,7 +27,7 @@ const Card = (param) => {
   return (
     <a onClick={handleClick} className={styles.cardBody}>
       <section className={styles.imageContainer}>
-        <img src={picture} alt="image" className={styles.image} />
+        <img src={param.imageurl} alt="image" className={styles.image} />
       </section>
       <section className={styles.details}>
         <p className={styles.p}>{param.name}</p>
@@ -37,6 +39,13 @@ const Card = (param) => {
           ${param.price}
           <span className={styles.prd}>/ night</span>
         </p>
+      </section>
+      <section className={styles.side}>
+        <Link to="/fullcard">
+          <button className={` btn btn-warning text-light ${styles.button}`}>
+            View
+          </button>
+        </Link>
       </section>
     </a>
   );
