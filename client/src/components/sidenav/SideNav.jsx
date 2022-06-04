@@ -12,6 +12,7 @@ import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import { faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { faDoorOpen } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const SideNav = () => {
   // const [toggle, settoggle] = useState(false);
@@ -28,16 +29,22 @@ const SideNav = () => {
         <section className={styles.top}>
           <p className={styles.first} title="Home">
             {" "}
-            <FontAwesomeIcon icon={faHome} />
+            <Link to="/home">
+              <FontAwesomeIcon icon={faHome} className={styles.link} />
+            </Link>
           </p>
         </section>
         <section className={styles.middle}>
           <p className={styles.fourth} title="Wish list">
             {" "}
-            <FontAwesomeIcon icon={faStarHalfAlt} />
+            <Link to="/wishlist" className={styles.link}>
+              <FontAwesomeIcon icon={faStarHalfAlt} />
+            </Link>
           </p>
           <p className={styles.second} title="Cantact us">
-            <FontAwesomeIcon icon={faAddressCard} />
+            <Link to="/contactus" className={styles.link}>
+              <FontAwesomeIcon icon={faAddressCard} />
+            </Link>
           </p>
           <p className={styles.third} title="Settings">
             {" "}
