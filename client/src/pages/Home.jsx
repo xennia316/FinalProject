@@ -136,7 +136,7 @@ const Home = () => {
               <div className={`input-group mb-3 mt-3`}>
                 <input
                   className={`${styles.input} form-control`}
-                  type="text"
+                  type="search"
                   placeholder="Enter Location to search from"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
