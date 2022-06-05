@@ -1,0 +1,12 @@
+.all {
+    width: 100vw;
+}
+
+.top {
+    width: 50%;
+}
+
+.heading {
+    justify-content: space-between;
+    /* width: 50vw; */
+}
