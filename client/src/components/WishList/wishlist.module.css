@@ -3,10 +3,26 @@
 }
 
 .top {
-    width: 50%;
+    width: 35%;
 }
 
 .heading {
     justify-content: space-between;
     /* width: 50vw; */
+}
+
+.image {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+}
+
+.subb {
+    /* height: 5vh; */
+}
+
+.sub1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
