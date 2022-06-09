@@ -72,7 +72,6 @@ const cardList = cards.map((card, index) => {
 });
 
 const wishcards = [
-  { name: "Mountain hotel", location: "Buea", price: "2.5k" },
   { name: "Chariot", location: "Limbe", price: "3.5k" },
   { name: "El palacio", location: "Douala", price: "4.5k" },
   { name: "Mountain hotel", location: "Dubai", price: "6.5k" },
@@ -131,7 +130,7 @@ const Home = () => {
                 <img src={Logo} className={styles.logo} />
               </div>
 
-              <h5 className={styles.h5}>Tell us where you're going next </h5>
+              <h5 className={styles.h5}>Tell us where you're going next</h5>
 
               <div className={`input-group mb-3 mt-3`}>
                 <input
