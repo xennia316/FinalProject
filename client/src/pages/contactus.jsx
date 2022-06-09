@@ -70,7 +70,7 @@ const contactus = () => {
             <button
               className={`btn btn-warning btn-lg mt-2 col-lg-12 p-2 col-md-8 col-sm-5 text-light ${styles.sign}`}
             >
-              Sign Up
+              Send Message
             </button>
           </div>
         </section>
