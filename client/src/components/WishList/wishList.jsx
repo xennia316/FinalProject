@@ -33,7 +33,7 @@ const wishList = () => {
                 <p>Price</p>
               </section>
             </section>
-            <section className={`d-flex  flex-column`}>
+            <section className={`d-flex  flex-column ${styles.buttonSection}`}>
               <section>
                 <FontAwesomeIcon icon={faTrashCan} />
               </section>
