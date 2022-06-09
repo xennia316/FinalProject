@@ -19,7 +19,7 @@ const FullCard = (param) => {
   if (!data) {
     return (
       <section className={styles.body}>
-        <p>Hotel Details</p>
+        <h4>Click on any hotel card to see its details</h4>
       </section>
     );
   }
@@ -46,17 +46,13 @@ const FullCard = (param) => {
             </div>
             <div>
               <p className={styles.text}>
-                {" "}
-                Line 39:19: The href attribute requires a valid value to be
-                accessible. Provide a valid, navigable address as the href
-                value. If you cannot provide a valid href, but still need the
-                element to resemble a link, use a button and change it with
-                appropriate styles. Learn more:
-                https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
-                jsx-a11y/anchor-is-valid Line 44:19: The href attribute requires
-                a valid value to be accessible. Provide a valid, navigable
-                address as the href value. If you cannot provide a valid href,
-                but still need
+                Laboriosam assumenda, molestiae, a suscipit eos illo placeat
+                soluta laudantium ea dignissimos saepe laborum ad iste. Veniam,
+                culpa! Tempore error, architecto facere iste perferendis iure
+                mollitia hic vel beatae earum. Laboriosam assumenda, molestiae,
+                a suscipit eos illo placeat soluta laudantium ea dignissimos
+                saepe laborum ad iste. Veniam, culpa! Tempore error, architecto
+                facere iste perferendis iure mollitia hic vel beatae earum.
               </p>
             </div>
             <div className={`d-flex ${styles.buttons}`}>
