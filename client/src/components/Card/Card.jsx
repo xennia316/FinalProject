@@ -15,7 +15,7 @@ const Card = (param) => {
 
   const handleClick = () => {
     const data = {
-      image: picture,
+      image: param.imageurl,
       name: param.name,
       location: param.location,
       price: param.price,

@@ -52,7 +52,7 @@ const Login = () => {
             <h3 className={styles.h3}>Sign In</h3>
             <form className={styles.form}>
               <label for="email" className={styles.label}>
-                <h6 className={styles.h6}>Name:</h6>{" "}
+                <h6 className={styles.h6}>Email:</h6>{" "}
               </label>
               <input
                 className={styles.input}
