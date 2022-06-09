@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
 import Card from "./components/Card/Card";
@@ -17,6 +22,7 @@ const App = () => {
     <HotelProvider>
       <Router>
         <Routes>
+          <Route path="/" element={<Navigate replace to="/signup" />} />
           <Route path="/contactus" element={<Contact />}></Route>
           <Route path="/fullcard" element={<FullCard />}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
