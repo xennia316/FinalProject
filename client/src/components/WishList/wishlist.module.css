@@ -1,5 +1,6 @@
 .all {
     width: 100vw;
+    margin-left: 5rem;
 }
 
 .top {
@@ -42,4 +43,10 @@
 .buttonSection {
     align-items: center;
     justify-content: space-between;
+}
+
+.sideNav {
+    position: fixed;
+    left: 0;
+    top: 0;
 }
