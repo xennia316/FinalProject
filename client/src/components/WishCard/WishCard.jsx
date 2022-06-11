@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import styles from "./wishCard.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import { HotelContext } from "../../HotelContext";
 
@@ -11,35 +11,39 @@ import picture from "../../images/mountain-hotel.jpg";
 
 const Card = (param) => {
   const { setData } = useContext(HotelContext);
-
   const handleClick = () => {
     const data = {
-      image: picture,
+      image: param.imageurl,
       name: param.name,
       location: param.location,
       price: param.price,
     };
-
     setData(data);
   };
 
   return (
-    <a onClick={handleClick} className={styles.cardBody}>
-      <section className={styles.imageContainer}>
-        <img src={picture} alt="image" className={styles.image} />
+    <section className={`d-flex  ${styles.subb}`} onClick={handleClick}>
+      <img src={param.imageurl} className={styles.image} alt="" />
+      <section className={`d-flex ${styles.sub}`}>
+        <section className={styles.sub1}>
+          <section>
+            <p>{param.name}</p>
+            <p>{param.location}</p>
+          </section>
+          <section>
+            <p>{param.price} /night</p>
+          </section>
+        </section>
+        <section className={`d-flex  flex-column ${styles.buttonSection}`}>
+          <section>
+            <FontAwesomeIcon icon={faTrashCan} />
+          </section>
+          <section>
+            <button className={`btn text-light btn-info`}>Book</button>
+          </section>
+        </section>
       </section>
-      <section className={styles.details}>
-        <p className={styles.p}>{param.name}</p>
-        <p className={styles.pmid}>
-          <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />{" "}
-          {param.location}
-        </p>
-        <p className={styles.p}>
-          ${param.price}
-          <span className={styles.prd}>/ night</span>
-        </p>
-      </section>
-    </a>
+    </section>
   );
 };
 
