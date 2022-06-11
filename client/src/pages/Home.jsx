@@ -56,7 +56,7 @@ const cards = [
   {
     name: "Mountain hotel",
     location: "Bafoussam",
-    imageurl: mountainhotel,
+    imageurl: "../images/mountain-hotel.jpg",
   },
 ];
 
@@ -72,11 +72,48 @@ const cardList = cards.map((card, index) => {
 });
 
 const wishcards = [
-  { name: "Chariot", location: "Limbe", price: "3.5k" },
-  { name: "El palacio", location: "Douala", price: "4.5k" },
-  { name: "Mountain hotel", location: "Dubai", price: "6.5k" },
-  { name: "DaCosta ", location: "Here", price: "7.5k" },
-  { name: "Brigeton", location: "There", price: "8.5k" },
+  {
+    name: "Hotel Semme",
+    location: "Limbe",
+    imageurl:
+      "http://searchcameroon.com/wp-content/uploads/2021/06/hilton-hotel-yaounde-SC1-580x408.jpg",
+  },
+  // { name: "Bingo", location: "Buea, imageurl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.afriquephotos.net%2Fen%2Fmedia%2F043fe559-1f21-4345-a8e6-cc79a8bfdf87-mount-febe-hotel-yaounde-cameroon&psig=AOvVaw2qFTIAK-IF39xjOhWaS1Qf&ust=1654421030307000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJjhqOG8k_gCFQAAAAAdAAAAABBI"},
+  {
+    name: "Hotel Semme",
+    location: "Douala",
+    imageurl:
+      "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2021/07/hilton-hotel-yaounde.jpg",
+  },
+  {
+    name: "El palacio",
+    location: "Kribi",
+    imageurl:
+      "https://blog.staah.com/wp-content/uploads/2018/03/hotelsign-min.jpg",
+  },
+  {
+    name: "Chariot",
+    location: "Edea",
+    imageurl:
+      "https://image.shutterstock.com/z/stock-photo-luxury-hotel-with-infinity-pool-and-palms-all-around-it-648165631.jpg",
+  },
+  {
+    name: "WDC",
+    location: "Buea",
+    imageurl:
+      "https://static.wixstatic.com/media/8dc5c1_d4939e195c5549ae9fc927bbb40dc368~mv2.jpg/v1/fill/w_1080,h_720,al_c,q_85,enc_auto/8dc5c1_d4939e195c5549ae9fc927bbb40dc368~mv2.jpg",
+  },
+  {
+    name: "Hilton",
+    location: "Yaounde",
+    imageurl:
+      "https://res.cloudinary.com/estate-intel/images/f_auto,q_auto/v1620432644/wp_assets/Radisson_Blu_Hotel__Apartments_Douala_Cameroon-700x868/Radisson_Blu_Hotel__Apartments_Douala_Cameroon-700x868.jpg?_i=AA",
+  },
+  {
+    name: "Mountain hotel",
+    location: "Bafoussam",
+    imageurl: mountainhotel,
+  },
 ];
 
 const listWishCards = wishcards.map((cards, index) => {
@@ -152,19 +189,20 @@ const Home = () => {
               </div>
             </section>
             <section className={styles.cardSection}>
-              {hotels !== null
-                ? hotels.map((card, index) => {
-                    return (
-                      <section className={styles.newCard}>
+              <section className={styles.newCard}>
+                {hotels !== null
+                  ? hotels.map((card, index) => {
+                      return (
                         <Card
                           name={card.name}
+                          imageurl={card.imageurl}
                           location={card.location}
                           key={index}
                         />
-                      </section>
-                    );
-                  })
-                : ""}
+                      );
+                    })
+                  : ""}
+              </section>
               <div className={`d-flex ${styles.linkDiv}`}>
                 <h1 className={styles.cardSectionHeading}> Hotels available</h1>
                 <a className={styles.link}> View All </a>
