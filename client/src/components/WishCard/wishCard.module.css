@@ -19,22 +19,23 @@
 }
 
 .subb {
-    width: 32.5vw;
-    padding: 2rem 0 1rem 0;
+    width: 50vw;
+    /* padding: 2rem 0 1rem 0; */
     border-radius: 15px;
     padding: 1rem;
+    margin: 1rem;
 }
 
 .subb:hover {
     cursor: pointer;
     background-color: #BCEDF6;
-    margin: -.2rem 0;
+    margin: -.1rem 0;
     box-shadow: 3px 3px #6B7FD7;
 }
 
 .sub {
     /* height: 50vh; */
-    width: 37vw;
+    width: 50vw;
     /* background: #000; */
     justify-content: space-between;
 }
@@ -54,5 +55,5 @@
 }
 
 .trash:hover {
-    color: yellow;
+    color: #ffc300;
 }
