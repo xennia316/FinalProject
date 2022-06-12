@@ -36,7 +36,7 @@ const Card = (param) => {
         </section>
         <section className={`d-flex  flex-column ${styles.buttonSection}`}>
           <section>
-            <FontAwesomeIcon icon={faTrashCan} />
+            <FontAwesomeIcon icon={faTrashCan} className={`${styles.trash}`} />
           </section>
           <section>
             <button className={`btn text-light btn-info`}>Book</button>
