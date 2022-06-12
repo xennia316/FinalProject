@@ -123,13 +123,19 @@ const listWishCards = wishcards.map((cards, index) => {
       name={cards.name}
       location={cards.location}
       price={cards.price}
-      image={cards.imageurl}
+      imageurl={cards.imageurl}
       key={index}
     />
   );
 });
 
 const Home = () => {
+  const date = new Date();
+  const n = date.toDateString();
+
+  const time =
+    date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
   const [town, setTown] = useState("");
   const [hotels, setHotels] = useState(null);
 
@@ -225,6 +231,10 @@ const Home = () => {
           </section>
           <section className={styles.rightContainer}>
             <div className={styles.right}>
+              <section className={`p-5`}>
+                <h3>Date: {n}</h3>
+                <h3>Time: {time}</h3>
+              </section>
               <FullCard />
             </div>
           </section>
