@@ -13,6 +13,7 @@ import WishCard from "../WishCard/WishCard";
 
 import { HotelContext } from "../../HotelContext";
 import { Link } from "react-router-dom";
+import FullCard from "../FullCard/FullCard";
 
 const WishList = (param) => {
   const cards = [
@@ -82,7 +83,12 @@ const WishList = (param) => {
           <h4>WishList</h4>
           <FontAwesomeIcon icon={faSearch} />
         </section>
-        {cardList}
+        <section className={`mt-5`}>{cardList}</section>
+      </section>
+      <section section={`${styles.rightContainer}`}>
+        <section className={`${styles.right}`}>
+          <FullCard />
+        </section>
       </section>
     </section>
   );
