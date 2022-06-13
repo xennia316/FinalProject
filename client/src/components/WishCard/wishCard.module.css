@@ -18,6 +18,8 @@
     border-radius: 15px;
 }
 
+
+
 .subb {
     width: 50vw;
     /* padding: 2rem 0 1rem 0; */
@@ -27,10 +29,13 @@
 }
 
 .subb:hover {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(55px) !important;
     cursor: pointer;
-    background-color: #BCEDF6;
+    color: #fff;
+    background-color: rgba(2, 62, 138, 0.5);
     margin: -.1rem 0;
-    box-shadow: 3px 3px #6B7FD7;
+    box-shadow: 3px 3px 5px #03045e;
 }
 
 .sub {
