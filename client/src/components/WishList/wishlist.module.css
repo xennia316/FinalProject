@@ -1,17 +1,29 @@
 .all {
     width: 100vw;
     margin-left: 5rem;
+    /* position: absolute; */
 }
 
 .top {
     width: 55%;
     padding: 2.5rem;
+    /* position: relative; */
     /* background-color: #ffc300; */
+}
+
+.rightContainer {
+    position: relative;
 }
 
 .heading {
     justify-content: space-between;
     /* width: 50vw; */
+}
+
+.right {
+    position: fixed;
+    top: 0;
+    right: 1;
 }
 
 .image {
