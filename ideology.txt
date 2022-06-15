@@ -12,6 +12,5 @@ Admin:
     ~ Picture
     ~ Little detail / about (optional)
     ~ Office number
-    ~ Link to hotel website (optional)
     ~ Hotel email (optional)
  ~ Go to user mode
