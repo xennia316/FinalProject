@@ -151,6 +151,7 @@
 }
 
 .wishCard {
+    width: inherit;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -204,6 +205,8 @@
 
     .wishCard {
         gap: 1.5rem;
+        margin-left: 0;
+        padding-left: 0;
     }
 
     .selected {
