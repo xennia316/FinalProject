@@ -22,7 +22,7 @@ const Card = (param) => {
   };
 
   return (
-    <section className={`d-flex  ${styles.subb}`} onClick={handleClick}>
+    <section className={`d-flex  ${styles.subb} col-12`} onClick={handleClick}>
       <img src={param.imageurl} className={styles.image} alt="" />
       <section className={`d-flex ${styles.sub}`}>
         <section className={styles.sub1}>
