@@ -28,16 +28,6 @@
     margin: 1rem 0;
 }
 
-.subb:hover {
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(55px) !important;
-    cursor: pointer;
-    color: #fff;
-    background-color: rgba(2, 62, 138, 0.5);
-    margin: -.01rem 0 0 0;
-    box-shadow: 3px 3px 5px #03045e;
-}
-
 .sub {
     /* height: 50vh; */
     width: 100%;
