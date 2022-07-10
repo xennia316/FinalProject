@@ -130,12 +130,6 @@ const listWishCards = wishcards.map((cards, index) => {
 });
 
 const Home = () => {
-  const date = new Date();
-  const n = date.toDateString();
-
-  const time =
-    date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-
   const [town, setTown] = useState("");
   const [hotels, setHotels] = useState(null);
 
@@ -157,6 +151,19 @@ const Home = () => {
   const handleChange = (e) => {
     setTown(e.target.value);
   };
+
+  const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const date = new Date();
+      const n = date.toDateString();
+      setDate(n);
+      const time =
+        date.getHours() + " : " + date.getMinutes() + " : " + date.getSeconds();
+      setTime(time);
+    }, 1000);
+  }, []);
 
   return (
     <section className={styles.wrapper}>
@@ -232,7 +239,7 @@ const Home = () => {
           <section className={styles.rightContainer}>
             <div className={styles.right}>
               <section className={`p-5`}>
-                <h3>Date: {n}</h3>
+                <h3>Date: {date} </h3>
                 <h3>Time: {time}</h3>
               </section>
               <FullCard />
