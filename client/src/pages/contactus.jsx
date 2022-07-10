@@ -3,8 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../styles/login.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SideNav from "../components/sidenav/SideNav";
 
 const contactus = () => {
+  // const navigate = useNavigate();
+
   const inputs = [
     {
       label: "Name:",
@@ -41,6 +44,7 @@ const contactus = () => {
   });
   return (
     <div className={`container ${styles.main}`}>
+      <SideNav />
       <section className={`${styles.left}`}>
         {" "}
         {/* <img src={logo} className={`${styles.image}`} /> */}
