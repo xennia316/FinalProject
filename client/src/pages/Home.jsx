@@ -154,13 +154,28 @@ const Home = () => {
 
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
+  const [period, setPeriod] = useState(" pm");
+
   useEffect(() => {
     const interval = setInterval(() => {
       const date = new Date();
       const n = date.toDateString();
       setDate(n);
+      let variable = date.getHours();
+      if (variable > 12) {
+        variable %= 12;
+        setPeriod(" pm");
+      } else if (variable == 24) {
+        variable %= 12;
+        setPeriod(" am");
+      }
       const time =
-        date.getHours() + " : " + date.getMinutes() + " : " + date.getSeconds();
+        variable +
+        " : " +
+        date.getMinutes() +
+        " : " +
+        date.getSeconds() +
+        period;
       setTime(time);
     }, 1000);
   }, []);
