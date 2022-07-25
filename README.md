@@ -5,7 +5,6 @@
 
 Design Links:
 
-  • https://www.figma.com/file/BPqMra97Pamw4eJDJtoIVM/Untitled
 
   • https://dribbble.com/shots/9411552-365daysbooking-Hotel-management-platform
 
